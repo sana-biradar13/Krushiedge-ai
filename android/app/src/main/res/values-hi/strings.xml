@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Identity -->
+    <string name="app_name">कृषिएड्ज AI</string>
+    <string name="app_tagline">आपके खेत का AI सहायक — बिना इंटरनेट के भी.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_farm">मेरा खेत</string>
+    <string name="nav_insights">विश्लेषण</string>
+    <string name="nav_camera">फसल जांच</string>
+    <string name="nav_more">और</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">कृषिएड्ज AI</string>
+    <string name="onboarding_welcome_subtitle">आपके खेत को समझने के लिए AI सहायता.</string>
+    <string name="onboarding_continue">आगे बढ़ें</string>
+    <string name="onboarding_skip">छोड़ें</string>
+    <string name="onboarding_done">शुरू करें</string>
+    <string name="onboarding_language_title">भाषा चुनें</string>
+    <string name="onboarding_language_subtitle">अपनी पसंदीदा भाषा चुनें.</string>
+    <string name="onboarding_farm_title">खेत की जानकारी</string>
+    <string name="onboarding_farm_subtitle">अपने खेत के बारे में बताएं.</string>
+    <string name="onboarding_offline_title">बिना इंटरनेट के भी काम करता है</string>
+    <string name="onboarding_offline_subtitle">कृषिएड्ज AI बिना इंटरनेट के भी काम करता है. AI विश्लेषण सीधे आपके फोन पर होता है.</string>
+    <string name="onboarding_permissions_title">अनुमतियां</string>
+    <string name="onboarding_permissions_subtitle">कृषिएड्ज AI को कुछ अनुमतियों की जरूरत है.</string>
+
+    <!-- Farm Setup -->
+    <string name="farm_name_label">खेत का नाम</string>
+    <string name="farm_name_hint">जैसे श्रीनिवास का खेत</string>
+    <string name="village_label">गांव</string>
+    <string name="village_hint">आपके गांव का नाम</string>
+    <string name="crop_label">फसल</string>
+    <string name="crop_hint">अपनी फसल चुनें</string>
+    <string name="area_label">क्षेत्रफल (एकड़)</string>
+    <string name="area_hint">जैसे 1.8</string>
+    <string name="crop_stage_label">फसल का चरण</string>
+    <string name="soil_type_label">मिट्टी का प्रकार (वैकल्पिक)</string>
+    <string name="save_farm">खेत सहेजें</string>
+
+    <!-- Crop Stages -->
+    <string name="stage_sowing">बुवाई</string>
+    <string name="stage_germination">अंकुरण</string>
+    <string name="stage_vegetative">वानस्पतिक विकास</string>
+    <string name="stage_flowering">फूल आना</string>
+    <string name="stage_grain_filling">दाना भरना</string>
+    <string name="stage_maturity">परिपक्वता</string>
+    <string name="stage_harvest">कटाई</string>
+
+    <!-- Crops -->
+    <string name="crop_ragi">रागी (मडुआ)</string>
+    <string name="crop_rice">धान</string>
+    <string name="crop_jowar">ज्वार</string>
+    <string name="crop_maize">मक्का</string>
+    <string name="crop_groundnut">मूंगफली</string>
+    <string name="crop_cotton">कपास</string>
+    <string name="crop_sugarcane">गन्ना</string>
+    <string name="crop_tomato">टमाटर</string>
+    <string name="crop_onion">प्याज</string>
+    <string name="crop_sunflower">सूरजमुखी</string>
+
+    <!-- Home Screen -->
+    <string name="greeting_morning">शुभ प्रभात</string>
+    <string name="greeting_afternoon">शुभ दोपहर</string>
+    <string name="greeting_evening">शुभ संध्या</string>
+    <string name="field_status">खेत की स्थिति</string>
+    <string name="today_advice">आज की सलाह</string>
+    <string name="take_crop_photo">फोटो लें</string>
+    <string name="today_crop_photo">आज की फसल फोटो</string>
+    <string name="check_field">खेत जांचें</string>
+    <string name="listen">सुनें</string>
+
+    <!-- Risk Levels -->
+    <string name="risk_normal">सामान्य</string>
+    <string name="risk_monitor">निगरानी करें</string>
+    <string name="risk_inspect">जांचें</string>
+    <string name="risk_urgent">तत्काल</string>
+    <string name="risk_insufficient">पर्याप्त जानकारी नहीं</string>
+
+    <!-- Camera -->
+    <string name="camera_title">फसल की जांच करें</string>
+    <string name="camera_instruction">पत्ती साफ दिखे ऐसे फोटो लें.</string>
+    <string name="camera_capture">फोटो</string>
+    <string name="camera_retake">दोबारा</string>
+    <string name="camera_analyze">विश्लेषण करें</string>
+    <string name="camera_flash_on">फ्लैश ऑन</string>
+    <string name="camera_flash_off">फ्लैश ऑफ</string>
+
+    <!-- AI Analysis -->
+    <string name="analyzing">विश्लेषण हो रहा है…</string>
+    <string name="analysis_complete">विश्लेषण पूर्ण</string>
+    <string name="ai_local_mode">स्थानीय AI</string>
+    <string name="ai_remote_mode">ऑनलाइन AI</string>
+    <string name="ai_hybrid_mode">संयुक्त AI</string>
+    <string name="ai_offline_mode">ऑफलाइन AI</string>
+    <string name="confidence_label">विश्वसनीयता</string>
+
+    <!-- Recommendations -->
+    <string name="recommendation_title">सलाह</string>
+    <string name="why_recommendation">यह सलाह क्यों आई?</string>
+    <string name="action_label">कदम</string>
+    <string name="reason_label">कारण</string>
+    <string name="urgency_label">तत्कालता</string>
+    <string name="evidence_label">प्रमाण</string>
+
+    <!-- Weather -->
+    <string name="weather_title">मौसम</string>
+    <string name="weather_updated">%1$s अपडेट किया</string>
+    <string name="weather_stale">मौसम की जानकारी पुरानी है.</string>
+    <string name="temperature_label">तापमान</string>
+    <string name="humidity_label">नमी</string>
+    <string name="rain_probability_label">बारिश की संभावना</string>
+    <string name="wind_label">हवा</string>
+
+    <!-- Satellite -->
+    <string name="satellite_title">उपग्रह डेटा</string>
+    <string name="ndvi_label">वनस्पति स्वास्थ्य सूचकांक</string>
+    <string name="ndvi_trend_label">वनस्पति स्वास्थ्य प्रवृत्ति</string>
+    <string name="moisture_label">मिट्टी की नमी</string>
+    <string name="satellite_source">स्रोत: %1$s</string>
+    <string name="satellite_date">प्राप्त तिथि: %1$s</string>
+
+    <!-- Insights -->
+    <string name="insights_title">विश्लेषण</string>
+    <string name="period_7days">7 दिन</string>
+    <string name="period_30days">30 दिन</string>
+    <string name="period_season">मौसम</string>
+    <string name="ndvi_trend_chart">वनस्पति स्वास्थ्य प्रवृत्ति</string>
+    <string name="moisture_trend_chart">नमी प्रवृत्ति</string>
+    <string name="rainfall_chart">वर्षा</string>
+    <string name="temperature_chart">तापमान</string>
+    <string name="stress_chart">फसल तनाव</string>
+
+    <!-- Farm Map -->
+    <string name="farm_map_title">खेत का नक्शा</string>
+    <string name="zone_label">क्षेत्र %1$d</string>
+    <string name="data_observed">देखा गया</string>
+    <string name="data_estimated">अनुमानित</string>
+    <string name="data_farmer_evidence">किसान का प्रमाण</string>
+
+    <!-- Offline / Sync -->
+    <string name="status_online">ऑनलाइन</string>
+    <string name="status_syncing">सिंक हो रहा है…</string>
+    <string name="status_offline">ऑफलाइन — स्थानीय AI उपलब्ध</string>
+    <string name="status_sync_pending">सिंक बाकी है</string>
+    <string name="status_data_stale">डेटा पुराना हो सकता है</string>
+    <string name="status_ai_local">AI स्थानीय मोड</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">इंटरनेट कनेक्शन नहीं है. स्थानीय AI उपलब्ध है.</string>
+    <string name="error_photo_unclear">फोटो साफ नहीं है. रोशनी बढ़ाकर दोबारा प्रयास करें.</string>
+    <string name="error_gps_unavailable">स्थान नहीं मिला. सहेजे गए खेत के स्थान का उपयोग हो रहा है.</string>
+    <string name="error_low_confidence">अभी पक्की सलाह देने के लिए पर्याप्त जानकारी नहीं है.</string>
+    <string name="error_weather_stale">मौसम की जानकारी पुरानी है.</string>
+    <string name="error_api_unavailable">ऑनलाइन AI उपलब्ध नहीं है. स्थानीय AI से जांच हो रही है.</string>
+    <string name="error_generic">कुछ गड़बड़ हुई. दोबारा प्रयास करें.</string>
+
+    <!-- XAI -->
+    <string name="xai_title">यह सलाह क्यों आई?</string>
+    <string name="xai_vegetation_trend">वनस्पति स्वास्थ्य प्रवृत्ति</string>
+    <string name="xai_soil_moisture">मिट्टी की नमी</string>
+    <string name="xai_crop_photo">फसल फोटो</string>
+    <string name="xai_weather">मौसम</string>
+    <string name="xai_recommendation">सलाह</string>
+
+    <!-- Technical / Judge Mode -->
+    <string name="technical_title">तकनीकी विवरण</string>
+    <string name="tech_edge_ai_status">एड्ज AI स्थिति</string>
+    <string name="tech_inference">इन्फरेन्स</string>
+    <string name="tech_network">नेटवर्क</string>
+    <string name="tech_remote_calls">रिमोट कॉल</string>
+    <string name="tech_model">मॉडल</string>
+    <string name="tech_model_size">मॉडल का आकार</string>
+    <string name="tech_quantization">क्वांटाइज़ेशन</string>
+    <string name="tech_inference_time">इन्फरेन्स समय</string>
+    <string name="tech_ram">RAM उपयोग</string>
+    <string name="tech_confidence">विश्वसनीयता</string>
+    <string name="tech_satellite_source">उपग्रह स्रोत</string>
+    <string name="tech_weather_source">मौसम स्रोत</string>
+    <string name="tech_data_age">डेटा की आयु</string>
+    <string name="tech_model_version">मॉडल संस्करण</string>
+    <string name="tech_sync_status">सिंक स्थिति</string>
+
+    <!-- Settings / More -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="language_setting">भाषा</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="data_controls">डेटा नियंत्रण</string>
+    <string name="delete_farm_data">खेत का डेटा हटाएं</string>
+    <string name="export_data">डेटा निर्यात</string>
+    <string name="about">जानकारी</string>
+    <string name="version">संस्करण %1$s</string>
+    <string name="demo_mode">डेमो मोड</string>
+    <string name="technical_mode">तकनीकी मोड</string>
+
+    <!-- SMS Fallback -->
+    <string name="sms_fallback_title">SMS फॉलबैक</string>
+    <string name="sms_fallback_description">7+ दिनों से इंटरनेट न होने पर, SMS से खेत की जानकारी मांगी जा सकती है.</string>
+    <string name="sms_send_request">SMS अनुरोध भेजें</string>
+    <string name="sms_last_request">आखिरी SMS अनुरोध: %1$s</string>
+
+    <!-- Permissions -->
+    <string name="permission_camera_title">कैमरा</string>
+    <string name="permission_camera_description">फसल स्कैन करने और स्वास्थ्य समस्याएं पहचानने के लिए.</string>
+    <string name="permission_location_title">स्थान</string>
+    <string name="permission_location_description">आपके खेत का पता लगाने और क्षेत्र-विशिष्ट जानकारी देने के लिए.</string>
+    <string name="permission_notification_title">सूचनाएं</string>
+    <string name="permission_notification_description">खेत की महत्वपूर्ण स्थिति के बारे में सचेत करने के लिए.</string>
+    <string name="permission_grant">अनुमति दें</string>
+    <string name="permission_granted">अनुमति दी गई</string>
+
+    <!-- Abstention -->
+    <string name="abstention_title">पर्याप्त जानकारी नहीं</string>
+    <string name="abstention_message">विश्वसनीय सलाह देने के लिए पर्याप्त डेटा नहीं है. एक और फोटो लें या अगले अवलोकन की प्रतीक्षा करें.</string>
+
+    <!-- Safety -->
+    <string name="safety_disclaimer">मिट्टी परीक्षण / स्थानीय कृषि मार्गदर्शन के आधार पर पोषक तत्व प्रबंधन की जांच करें.</string>
+
+    <!-- Data Freshness -->
+    <string name="updated_just_now">अभी अपडेट किया गया</string>
+    <string name="updated_minutes_ago">%1$d मिनट पहले अपडेट</string>
+    <string name="updated_hours_ago">%1$d घंटे पहले अपडेट</string>
+    <string name="updated_days_ago">%1$d दिन पहले अपडेट</string>
+
+    <!-- Units -->
+    <string name="unit_acres">एकड़</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_percent">%</string>
+    <string name="unit_kmh">किमी/घंटा</string>
+    <string name="unit_mm">मिमी</string>
+    <string name="unit_mb">MB</string>
+    <string name="unit_ms">ms</string>
+
+    <!-- Demo -->
+    <string name="demo_farm_name">श्रीनिवास का खेत</string>
+    <string name="demo_village">होसहल्ली</string>
+    <string name="demo_crop">रागी</string>
+    <string name="demo_area">1.8</string>
+</resources>

@@ -1,0 +1,21 @@
+# GitHub Workflows (avoid oauth token scope conflicts)
+.github/
+
+# Binary executables
+cloudflared.exe
+*.exe
+
+# SDK and heavy tools
+tools/
+tools/android-sdk/
+
+# Gradle and Android build files
+.gradle/
+build/
+*/build/
+*.iml
+.idea/
+local.properties
+.DS_Store
+*.log
+*.tmp

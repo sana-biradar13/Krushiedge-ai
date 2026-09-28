@@ -1,0 +1,11 @@
+package com.krushiedge
+
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class KrushiEdgeApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+    }
+}

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1B4332">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>KRUSHIEDGE AI — ನಿಮ್ಮ ಹೊಲದ AI ಸಹಾಯಕ</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tiro+Kannada:ital@0;1&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=4.0">
+
+  <style>
+    :root {
+      --krushi-primary: #2D6A4F;
+      --krushi-primary-dark: #1B4332;
+      --krushi-primary-light: #52B788;
+      --krushi-primary-container: #D8F3DC;
+      --krushi-bg: #F4FBF7;
+      --krushi-surface: #FFFFFF;
+      --krushi-surface-variant: #E8F5E9;
+      --krushi-border: #C8E6C9;
+      --text-main: #132A13;
+      --text-muted: #4A6B53;
+      --risk-urgent: #C62828;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      font-family: 'Plus Jakarta Sans', 'Tiro Kannada', 'Noto Sans Devanagari', sans-serif;
+    }
+
+    body {
+      background: #0B1D13;
+      background-image: radial-gradient(#1B4332 1px, transparent 1px);
+      background-size: 24px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: var(--text-main);
+      padding: 16px;
+    }
+
+    .app-viewport {
+      width: 100%;
+      max-width: 440px;
+      height: 920px;
+      max-height: 96vh;
+      background: #FAF8F5;
+      border-radius: 36px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 0 10px #11261B;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .device-frame {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Status Bar */
+    .status-bar {
+      height: 38px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #1B4332;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+
+    .offline-tag {
+      background: #D8F3DC;
+      color: #1B4332;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+      margin-right: 8px;
+      font-weight: 800;
+    }
+
+    /* ══════════════════════════════════════════════════════════════ */
+    /* ── AUTH FULLSCREEN VIEW ── */
+    /* ══════════════════════════════════════════════════════════════ */
+    .auth-fullscreen-view {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, #E8F5E9 0%, #FAF8F5 30%);
+      padding: 16px 20px 24px 20px;
+      overflow-y: auto;
+    }
+
+    .auth-header-top {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+    }
+
+    .btn-lang-auth {
+      background: #FFFFFF;
+      border: 1.5px solid #A7D7B5;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #1B4332;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(27, 67, 50, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .btn-lang-auth:hover {
+      background: #D8F3DC;
+      transform: translateY(-1px);
+    }
+
+    .auth-hero-banner {
+      text-align: center;
+      margin: 8px 0 16px 0;
+    }
+
+    .auth-brand-badge {
+      width: 68px;
+      height: 68px;
+      background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+      color: #FFFFFF;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 12px auto;
+      box-shadow: 0 10px 25px rgba(27, 67, 50, 0.35);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .auth-app-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #1B4332;
+      letter-spacing: 0.5px;
+    }
+
+    .auth-app-subtitle {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-top: 2px;
+    }
+
+    .auth-tagline {
+      display: inline-block;
+      background: #D8F3DC;
+      color: #1B4332;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 14px;
+      margin-top: 8px;
+      border: 1px solid #B7E4C7;
+    }
+
+    .auth-card-body {
+      background: #FFFFFF;
+      border: 1.5px solid #C8E6C9;
+      border-radius: 24px;
+      padding: 22px 18px;
+      box-shadow: 0 8px 24px rgba(27, 67, 50, 0.08);
+    }
+
+    .auth-toggle-pill {
+      display: flex;
+      background: #F0FDF4;
+      border: 1px solid #D1E7DD;
+      border-radius: 14px;
+      padding: 4px;
+      margin-bottom: 18px;
+    }
+
+    .auth-pill-btn {
+      flex: 1;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #4A6B53;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .auth-pill-btn.active {
+      background: linear-gradient(135deg, #2D6A4F, #1B4332);
+      color: #FFFFFF;
+      box-shadow: 0 3px 10px rgba(27, 67, 50, 0.25);
+    }
+
+    .auth-form-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .input-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-field-group label {
+      font-size: 12px;
+      font-weight: 800;
+      color: #1B4332;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .input-field-group label i {
+      color: #2D6A4F;
+      font-size: 13px;
+    }
+
+    .input-field-group input, .input-field-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #C8E6C9;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #132A13;
+      outline: none;
+      background: #FAFAF8;
+      transition: all 0.2s ease;
+    }
+
+    .input-field-group input:focus, .input-field-group select:focus {
+      border-color: #2D6A4F;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.18);
+    }
+
+    .password-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .btn-toggle-pwd {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: #6C757D;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px;
+    }
+
+    .btn-primary-auth {
+      background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 16px rgba(27, 67, 50, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary-auth:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .guest-action-wrap {
+      text-align: center;
+      margin-top: 16px;
+      border-top: 1px solid #E8F5E9;
+      padding-top: 14px;
+    }
+
+    .btn-guest-continue {
+      background: none;
+      border: none;
+      color: #2D6A4F;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      padding: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-guest-continue:hover {
+      color: #1B4332;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-viewport">
+    <div class="device-frame">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <div class="status-left">
+          <span class="status-time" id="liveClock">10:15</span>
+        </div>
+        <div class="status-right">
+          <span class="offline-tag" id="statusPill"><i class="fa-solid fa-bolt"></i> Local Edge AI</span>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════════ -->
+      <!-- ── AUTH VIEW: FIRST SCREEN ON LAUNCH ── -->
+      <!-- ══════════════════════════════════════════════════════════════ -->
+      <div class="auth-fullscreen-view" id="authFullscreenView">
+        <div class="auth-header-top">
+          <button class="btn-lang-auth" id="btnLoginLangToggle">
+            <i class="fa-solid fa-language"></i> <span id="authLangBadge">ಕನ್ನಡ</span> <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i>
+          </button>
+        </div>
+
+        <div class="auth-hero-banner">
+          <div class="auth-brand-badge">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h2 class="auth-app-title">KRUSHIEDGE AI</h2>
+          <p class="auth-app-subtitle" id="authSubTitle">ನಿಮ್ಮ ಹೊಲದ ನೈಜ AI ಸಹಾಯಕ</p>
+          <span class="auth-tagline" id="authTagline">ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದಿದ್ದರೂ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ</span>
+        </div>
+
+        <div class="auth-card-body">
+          <div class="auth-toggle-pill">
+            <button class="auth-pill-btn active" id="btnPillLogin">ಲಾಗಿನ್ (Login)</button>
+            <button class="auth-pill-btn" id="btnPillSignUp">ಹೊಸ ಖಾತೆ (Sign Up)</button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <form class="auth-form-box" id="formLogin">
+            <div class="input-field-group">
+              <label id="lblAuthLoginUser"><i class="fa-solid fa-phone"></i> ಮೊಬೈಲ್ ಸಂಖ್ಯೆ / ಇಮೇಲ್</label>
+              <input type="text" id="inputLoginIdentifier" placeholder="9845012345" required value="9845012345">
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthLoginPass"><i class="fa-solid fa-lock"></i> ಪಾಸ್‌ವರ್ಡ್ (Password)</label>
+              <div class="password-input-wrap">
+                <input type="password" id="inputLoginPassword" placeholder="••••••••" required value="farmer123">
+                <button type="button" class="btn-toggle-pwd" id="btnToggleLoginPwd"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary-auth" id="btnDoLogin">
+              <i class="fa-solid fa-right-to-bracket"></i> <span id="btnDoLoginText">ಖಾತೆಗೆ ಪ್ರವೇಶಿಸಿ (Login)</span>
+            </button>
+          </form>
+
+          <!-- SIGN UP FORM WITH REAL FARM SELECTION -->
+          <form class="auth-form-box" id="formSignUp" style="display: none;">
+            <div class="input-field-group">
+              <label id="lblAuthSignName"><i class="fa-solid fa-user"></i> ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು (Full Name)</label>
+              <input type="text" id="inputSignName" placeholder="ಉದಾ. ಶ್ರೀನಿವಾಸ್ ಗೌಡ" required value="ಶ್ರೀನಿವಾಸ್ ಗೌಡ">
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignPhone"><i class="fa-solid fa-phone"></i> ಮೊಬೈಲ್ ಸಂಖ್ಯೆ (Phone)</label>
+              <input type="tel" id="inputSignPhone" placeholder="ಉದಾ. 9845012345" required value="9845012345">
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignCrop"><i class="fa-solid fa-seedling"></i> ನಿಮ್ಮ ಮುಖ್ಯ ಬೆಳೆ (Crop)</label>
+              <select id="selectSignCrop">
+                <option value="ragi" selected>ರಾಗಿ (Finger Millet / Ragi)</option>
+                <option value="rice">ಭತ್ತ (Paddy / Rice)</option>
+                <option value="sugarcane">ಕಬ್ಬು (Sugarcane)</option>
+                <option value="tomato">ಟೊಮ್ಯಾಟೊ (Tomato)</option>
+                <option value="cotton">ಹತ್ತಿ (Cotton)</option>
+                <option value="groundnut">ಕಡಲೆಕಾಯಿ (Groundnut)</option>
+                <option value="maize">ಮೆಕ್ಕೆಜೋಳ (Maize)</option>
+                <option value="onion">ಈರುಳ್ಳಿ (Onion)</option>
+              </select>
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignArea"><i class="fa-solid fa-vector-square"></i> ಹೊಲದ ವಿಸ್ತೀರ್ಣ (Acres)</label>
+              <input type="number" step="0.5" id="inputSignArea" placeholder="ಉದಾ. 2.5" value="2.5" required>
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignVillage"><i class="fa-solid fa-location-dot"></i> ಹಳ್ಳಿ / ಜಿಲ್ಲೆ (Village)</label>
+              <input type="text" id="inputSignVillage" placeholder="ಉದಾ. ಮಂಡ್ಯ (Mandya)" value="ಮಂಡ್ಯ (Mandya)" required>
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignLang"><i class="fa-solid fa-language"></i> ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆ (Language)</label>
+              <select id="selectSignLanguage">
+                <option value="kn" selected>ಕನ್ನಡ (Kannada)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+
+            <div class="input-field-group">
+              <label id="lblAuthSignPass"><i class="fa-solid fa-lock"></i> ಪಾಸ್‌ವರ್ಡ್ ರಚಿಸಿ (Password)</label>
+              <input type="password" id="inputSignPassword" placeholder="ಕನಿಷ್ಠ 6 ಅಕ್ಷರಗಳು" required value="farmer123">
+            </div>
+
+            <button type="submit" class="btn-primary-auth" id="btnDoSignUp">
+              <i class="fa-solid fa-user-plus"></i> <span id="btnDoSignUpText">ಖಾತೆ ರಚಿಸಿ & ಪ್ರಾರಂಭಿಸಿ</span>
+            </button>
+          </form>
+
+          <!-- Continue as Guest Demo Button -->
+          <div class="guest-action-wrap">
+            <button type="button" class="btn-guest-continue" id="btnContinueGuest">
+              <span id="btnGuestText">ಡೆಮೊ / ಅತಿಥಿಯಾಗಿ ಮುಂದುವರಿಸಿ (Continue as Guest)</span> ➔
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════════ -->
+      <!-- ── MAIN APPLICATION VIEW (AFTER LOGIN) ── -->
+      <!-- ══════════════════════════════════════════════════════════════ -->
+      <div class="main-app-wrapper" id="mainAppWrapper" style="display: none;">
+        <!-- App Header -->
+        <header class="app-header">
+          <div class="header-content">
+            <div class="header-brand">
+              <div class="brand-badge"><i class="fa-solid fa-leaf"></i></div>
+              <div>
+                <h1 class="brand-title">KRUSHIEDGE AI</h1>
+                <p class="brand-subtitle" id="headerSubtitle">ನಿಮ್ಮ ಹೊಲದ AI ಸಹಾಯಕ (Mandya)</p>
+              </div>
+            </div>
+            <div class="header-actions">
+              <!-- Language Selector Button -->
+              <button class="btn-lang" id="btnLangToggle" title="Change Language">
+                <i class="fa-solid fa-language"></i> <span id="currentLangLabel">ಕನ್ನಡ</span>
+              </button>
+              <!-- User Profile Button -->
+              <button class="btn-auth-header" id="btnAuthHeader" title="Farmer Account">
+                <i class="fa-solid fa-user-circle"></i> <span id="userHeaderName">ಶ್ರೀನಿವಾಸ್</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Main Content Container with Tabs -->
+        <main class="main-content" id="mainContainer">
+          <!-- ── TAB 1: HOME ── -->
+          <section class="tab-pane active" id="tabHome">
+            <!-- Audio Advisory Player -->
+            <div class="audio-banner" id="audioPlayer">
+              <button class="audio-play-btn" id="btnPlayAdvisory">
+                <i class="fa-solid fa-play" id="audioIcon"></i>
+              </button>
+              <div class="audio-info">
+                <div class="audio-title" id="audioTitle">ಇಂದಿನ ಬೆಳೆ ಸಲಹೆ ಆಲಿಸಿ (ಕನ್ನಡ)</div>
+                <div class="audio-sub" id="audioSub">ಸ್ಪಷ್ಟ ಕನ್ನಡದಲ್ಲಿ ಕೇಳಲು ಒತ್ತಿ</div>
+              </div>
+              <div class="audio-wave" id="audioWave">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Hero Farm Status Card -->
+            <div class="card farm-hero-card">
+              <div class="card-header-row">
+                <div>
+                  <h3 class="farm-name" id="farmName">ಶ್ರೀನಿವಾಸ್ ಅವರ ಹೊಲ (My Farm)</h3>
+                  <p class="crop-meta" id="farmCropMeta">ರಾಗಿ (Finger Millet) • 2.5 ಎಕರೆ • ಹೂವಾಡುವ ಹಂತ</p>
+                </div>
+                <button class="btn-edit-farm" id="btnEditFarm" title="Edit your farm data">
+                  <i class="fa-solid fa-pen-to-square"></i> <span id="btnEditFarmText">ಬದಲಾಯಿಸಿ</span>
+                </button>
+              </div>
+
+              <div class="alert-box-urgent">
+                <div class="alert-icon"><i class="fa-solid fa-biohazard"></i></div>
+                <div class="alert-content">
+                  <strong id="alertTitle">ರೋಗ ತಪಾಸಣೆ ಮತ್ತು ಹವಾಮಾನ ಎಚ್ಚರಿಕೆ</strong>
+                  <p id="alertBody">ತೇವಾಂಶ 68% ಇರುವುದರಿಂದ ಹೊಲವನ್ನು ಪರಿಶೀಲಿಸಿ. ಅಗತ್ಯವಿದ್ದಲ್ಲಿ ಜೈವಿಕ ಔಷಧ ಸಿಂಪಡಿಸಿ.</p>
+                </div>
+              </div>
+
+              <div class="card-footer-row">
+                <span class="badge-ai-mode"><i class="fa-solid fa-microchip"></i> Hybrid Edge + Cloud</span>
+                <button class="link-btn" id="btnGoToZoning"><span id="btnZoningText">ವಲಯ ನಕ್ಷೆ ನೋಡಿ</span> ➔</button>
+              </div>
+            </div>
+
+            <!-- Quick Action: Scan Leaf with AI -->
+            <div class="card scan-action-card" id="btnQuickScan">
+              <div class="scan-card-content">
+                <div class="scan-icon-circle">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <div>
+                  <h3 id="scanCardTitle">ಬೆಳೆ ಡಾಕ್ಟರ್ AI ಕ್ಯಾಮೆರಾ</h3>
+                  <p id="scanCardSub">ನೈಜ ಕ್ಯಾಮೆರಾದಿಂದ ಫೋಟೋ ತೆಗೆದು ರೋಗ ಪತ್ತೆ ಹಚ್ಚಿ</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right scan-arrow"></i>
+            </div>
+
+            <!-- Weather & Microclimate -->
+            <div class="section-heading">
+              <h3 id="weatherHeading">ಇಂದಿನ ಹವಾಮಾನ ಮತ್ತು ಮಣ್ಣಿನ ಸ್ಥಿತಿ</h3>
+              <button class="btn-refresh-weather" id="btnRefreshWeather" title="Refresh Live Weather">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </button>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                <div class="stat-label" id="lblTemp">ತಾಪಮಾನ</div>
+                <div class="stat-val" id="valTemp">29.5°C</div>
+                <div class="stat-sub" id="subTemp">ಸಾಮಾನ್ಯ ಬಿಸಿಲು</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-droplet"></i></div>
+                <div class="stat-label" id="lblHumidity">ತೇವಾಂಶ</div>
+                <div class="stat-val" id="valHumidity">68%</div>
+                <div class="stat-sub" id="subHumidity">ಸೂಕ್ತ ಮಟ್ಟ</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                <div class="stat-label" id="lblRain">ಮಳೆ ಸಂಭವ</div>
+                <div class="stat-val" id="valRain">15%</div>
+                <div class="stat-sub" id="subRain">ಮಳೆ ಇಲ್ಲ</div>
+              </div>
+            </div>
+
+            <!-- Spraying Advisory Banner -->
+            <div class="card spray-advisory-card" id="sprayCard">
+              <div class="spray-header">
+                <i class="fa-solid fa-spray-can-sparkles text-green"></i>
+                <strong id="sprayCardTitle">ಕೀಟನಾಶಕ ಸಿಂಪರಣೆ ಮುನ್ಸೂಚನೆ</strong>
+              </div>
+              <p id="sprayCardBody">ಇಂದು ಸಿಂಪರಣೆಗೆ ಸೂಕ್ತ ವಾತಾವರಣವಿದೆ (ಗಾಳಿಯ ವೇಗ: 9 km/h, ಮಳೆ ಸಾಧ್ಯತೆ ಕಡಿಮೆ).</p>
+            </div>
+
+            <!-- Quick Module Grid -->
+            <div class="section-heading">
+              <h3 id="modulesHeading">ಸ್ಮಾರ್ಟ್ ಕೃಷಿ ಸೇವೆಗಳು</h3>
+            </div>
+            <div class="modules-grid">
+              <div class="module-card" id="modIrrigation">
+                <div class="module-icon water"><i class="fa-solid fa-faucet-drip"></i></div>
+                <h4 id="modIrrigTitle">ನೀರಾವರಿ ಸಲಹೆ</h4>
+                <p id="modIrrigSub">ನಾಳೆ 1.8 ಗಂಟೆ ಪಂಪ್</p>
+              </div>
+              <div class="module-card" id="modPest">
+                <div class="module-icon pest"><i class="fa-solid fa-bug"></i></div>
+                <h4 id="modPestTitle">ಕೀಟ ಮುನ್ಸೂಚನೆ</h4>
+                <p id="modPestSub">ಕೀಟ ಹಾವಳಿ ಎಚ್ಚರಿಕೆ</p>
+              </div>
+              <div class="module-card" id="modMarket">
+                <div class="module-icon market"><i class="fa-solid fa-store"></i></div>
+                <h4 id="modMarketTitle">ಮಂಡಿ ಬೆಲೆ</h4>
+                <p class="highlight-price" id="modMarketSub">₹3,720 / ಕ್ವಿಂ</p>
+              </div>
+            </div>
+
+            <!-- Download App Banner -->
+            <div class="apk-download-banner">
+              <div class="apk-info">
+                <i class="fa-brands fa-android apk-icon"></i>
+                <div>
+                  <strong id="apkBannerTitle">ಆಂಡ್ರಾಯ್ಡ್ ಆ್ಯಪ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</strong>
+                  <p id="apkBannerSub">ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದಿದ್ದರೂ ಆಫ್‌ಲೈನ್ AI ಕೆಲಸ ಮಾಡುತ್ತದೆ</p>
+                </div>
+              </div>
+              <a href="app-debug.apk" class="btn-download-apk" download>
+                <i class="fa-solid fa-download"></i> APK
+              </a>
+            </div>
+          </section>
+
+          <!-- ── TAB 2: CROP DOCTOR (CAMERA & SCAN) ── -->
+          <section class="tab-pane" id="tabScan">
+            <div class="camera-container">
+              <!-- Crop Chips -->
+              <div class="crop-picker-bar">
+                <button class="crop-chip active" data-crop="ragi">ರಾಗಿ (Ragi)</button>
+                <button class="crop-chip" data-crop="groundnut">ಕಡಲೆಕಾಯಿ</button>
+                <button class="crop-chip" data-crop="cotton">ಹತ್ತಿ (Cotton)</button>
+                <button class="crop-chip" data-crop="tomato">ಟೊಮ್ಯಾಟೊ</button>
+                <button class="crop-chip" data-crop="rice">ಭತ್ತ (Rice)</button>
+                <button class="crop-chip" data-crop="sugarcane">ಕಬ್ಬು (Sugarcane)</button>
+              </div>
+
+              <!-- Viewfinder Area with Live Video Stream / File Upload -->
+              <div class="viewfinder" id="viewfinderArea">
+                <video id="cameraVideo" autoplay playsinline muted class="camera-feed-video"></video>
+                <canvas id="captureCanvas" style="display:none;"></canvas>
+                
+                <div class="reticle-box" id="reticleBox">
+                  <div class="reticle-corner top-left"></div>
+                  <div class="reticle-corner top-right"></div>
+                  <div class="reticle-corner bottom-left"></div>
+                  <div class="reticle-corner bottom-right"></div>
+                  
+                  <div class="reticle-inner" id="viewfinderContent">
+                    <i class="fa-solid fa-camera-retro fa-3x reticle-icon" id="cameraStartIcon"></i>
+                    <p id="viewfinderHint">ಬಾಧಿತ ಎಲೆಯನ್ನು ಚೌಕಟ್ಟಿನಲ್ಲಿ ಹಿಡಿಯಿರಿ</p>
+                    <div style="display:flex; flex-direction:column; gap:8px; width:100%; align-items:center;">
+                      <button class="btn-start-camera" id="btnStartRealCamera">
+                        <i class="fa-solid fa-video"></i> <span id="btnStartCamText">ಕ್ಯಾಮೆರಾ ಆನ್ ಮಾಡಿ</span>
+                      </button>
+                      <button class="btn-start-camera" id="btnDirectUpload" style="background:#1B4332; border:1px solid #52B788;">
+                        <i class="fa-solid fa-upload"></i> <span id="btnUploadText">ಫೋಟೋ ಆಯ್ಕೆಮಾಡಿ (Upload Leaf)</span>
+                      </button>
+                    </div>
+                  </div>
+                  <img id="scannedLeafPreview" class="scanned-leaf-preview" style="display:none;" alt="Leaf preview">
+                </div>
+
+                <div class="offline-engine-badge">
+                  <i class="fa-solid fa-shield-halved"></i> Strict Leaf & Lesion AI (Offline Active)
+                </div>
+              </div>
+
+              <!-- Real File Input Hidden with Camera Fallback -->
+              <input type="file" id="realFileInput" accept="image/*" style="display: none;">
+
+              <!-- Shutter & Controls -->
+              <div class="shutter-bar">
+                <button class="btn-tool" id="btnUploadGallery" title="Upload from Gallery">
+                  <i class="fa-solid fa-images"></i>
+                </button>
+                <button class="btn-shutter" id="btnShutter" title="Take Photo & Analyze">
+                  <div class="shutter-inner">
+                    <i class="fa-solid fa-camera"></i>
+                  </div>
+                </button>
+                <button class="btn-tool" id="btnSwitchCamera" title="Switch Camera">
+                  <i class="fa-solid fa-camera-rotate"></i>
+                </button>
+              </div>
+              <p class="shutter-note" id="shutterNote">💡 ಬೆಳೆಯ ಎಲೆಯ ಹತ್ತಿರದ ಫೋಟೋವನ್ನು ತೆಗೆಯಿರಿ ಅಥವಾ ಗ್ಯಾಲರಿಯಿಂದ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ!</p>
+            </div>
+          </section>
+
+          <!-- ── TAB 3: SMART IRRIGATION ── -->
+          <section class="tab-pane" id="tabIrrigation">
+            <div class="card moisture-gauge-card">
+              <div class="card-header-row">
+                <h3 id="irrigMoistureTitle">ಮಣ್ಣಿನ ಪ್ರಸ್ತುತ ತೇವಾಂಶ (Soil Moisture)</h3>
+                <span class="status-chip-warn" id="irrigStatusChip">ನೀರುಣಿಸುವ ಅಗತ್ಯವಿದೆ</span>
+              </div>
+              
+              <div class="gauge-display">
+                <div class="gauge-val" id="gaugeVal">38%</div>
+                <div class="gauge-target">/ <span id="gaugeTarget">ಗುರಿ</span>: 65%</div>
+              </div>
+              
+              <div class="progress-track">
+                <div class="progress-fill" id="irrigProgressFill" style="width: 38%;"></div>
+              </div>
+
+              <p class="advisory-text" id="irrigAdvisoryText">
+                ಕೆಂಪು ಮಣ್ಣಿನ ತೇವಾಂಶ 38% ಕ್ಕೆ ಇಳಿದಿದೆ. ನಾಳೆ ಮುಂಜಾನೆ 5HP ಪಂಪ್ ಅನ್ನು 1.8 ಗಂಟೆಗಳ ಕಾಲ ಚಲಾಯಿಸಿ. ಇದರಿಂದ 28.5% ನೀರು ಉಳಿತಾಯವಾಗುತ್ತದೆ.
+              </p>
+            </div>
+
+            <div class="card pump-schedule-card">
+              <div class="card-header-row">
+                <div class="pump-title">
+                  <i class="fa-solid fa-clock"></i>
+                  <h4 id="pumpScheduleTitle">ಶಿಫಾರಸು ಮಾಡಿದ ಪಂಪ್ ಚಾಲನೆ ಸಮಯ</h4>
+                </div>
+                <span class="badge-local"><i class="fa-solid fa-bolt"></i> Local FAO-56</span>
+              </div>
+
+              <div class="pump-details-grid">
+                <div>
+                  <span class="meta-label" id="pumpMotorLabel">5 HP ಮೋಟಾರ್ ಅವಧಿ</span>
+                  <div class="meta-val highlight" id="pumpRunDuration">1.8 ಗಂಟೆ (1h 48m)</div>
+                </div>
+                <div class="text-right">
+                  <span class="meta-label" id="pumpOptimalLabel">ಉತ್ತಮ ಸಮಯ</span>
+                  <div class="meta-val gold" id="pumpOptimalTime">ನಾಳೆ ಬೆಳಗ್ಗೆ 06:00 - 08:00</div>
+                </div>
+              </div>
+
+              <div class="savings-callout">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <span id="pumpSavingsNote">ಬೆಳಗಿನ ಸಮಯದಲ್ಲಿ ನೀರುಣಿಸುವುದರಿಂದ 28.5% ಆವಿಯಾಗುವಿಕೆ ನಷ್ಟ ತಡೆಯಬಹುದು.</span>
+              </div>
+            </div>
+
+            <!-- Interactive Motor HP Calculator -->
+            <div class="card motor-calc-card">
+              <h4 id="calcMotorTitle">ನಿಮ್ಮ ಮೋಟಾರ್ ಸಾಮರ್ಥ್ಯ ಆಯ್ಕೆಮಾಡಿ (HP)</h4>
+              <div class="hp-selector-row">
+                <button class="btn-hp active" data-hp="3">3 HP</button>
+                <button class="btn-hp" data-hp="5">5 HP</button>
+                <button class="btn-hp" data-hp="7.5">7.5 HP</button>
+                <button class="btn-hp" data-hp="10">10 HP</button>
+              </div>
+              <div class="calc-result" id="calcResultText">
+                3 HP ಮೋಟಾರ್‌ಗೆ: <strong>3.0 ಗಂಟೆ</strong> ಚಾಲನೆ ಅಗತ್ಯ (ಒಟ್ಟು 36,000 ಲೀಟರ್).
+              </div>
+            </div>
+          </section>
+
+          <!-- ── TAB 4: PEST FORECAST ── -->
+          <section class="tab-pane" id="tabPest">
+            <div class="card pest-hero-card">
+              <div class="card-header-row">
+                <div>
+                  <h3 class="pest-name" id="pestHeroName">ಕೀಟ ಬಾಧೆ ಮುನ್ಸೂಚನೆ</h3>
+                  <p class="pest-sci" id="pestHeroSci">Spodoptera frugiperda</p>
+                </div>
+                <span class="risk-badge urgent" id="pestHeroRisk"><i class="fa-solid fa-triangle-exclamation"></i> ಮಧ್ಯಮ ರಿಸ್ಕ್</span>
+              </div>
+
+              <div class="chart-header">
+                <span id="pestProjectionLabel">7 ದಿನಗಳ ಹಾವಳಿ ಸಂಭವನೀಯತೆ (7-Day Projection):</span>
+              </div>
+
+              <div class="chart-bars-row">
+                <div class="bar-col">
+                  <div class="bar-fill h-40"></div>
+                  <span id="dayMon">ಸೋಮ</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-55"></div>
+                  <span id="dayTue">ಮಂಗಳ</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-70 warn"></div>
+                  <span id="dayWed">ಬುಧ</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-85 danger"></div>
+                  <span id="dayThu">ಗುರು</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-90 danger"></div>
+                  <span id="dayFri">ಶುಕ್ರ</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-60 warn"></div>
+                  <span id="daySat">ಶನಿ</span>
+                </div>
+                <div class="bar-col">
+                  <div class="bar-fill h-30"></div>
+                  <span id="daySun">ಭಾನು</span>
+                </div>
+              </div>
+
+              <div class="pest-action-box">
+                <strong id="pestActionTitle">ತಕ್ಷಣದ ಕ್ರಮ (Immediate Action):</strong>
+                <p id="pestActionBody">ಬೇವಿನ ಎಣ್ಣೆ (Azadirachtin 10,000 ppm) 2ml/L ನೀರಿನಲ್ಲಿ ಬೆರೆಸಿ ಮುಂಜಾನೆ ಸಿಂಪಡಿಸಿ.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── TAB 5: MANDI PRICES ── -->
+          <section class="tab-pane" id="tabMarket">
+            <div class="market-header-card">
+              <div class="mandi-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h3 id="mandiLocTitle">ಮಂಡ್ಯ APMC ಮಾರುಕಟ್ಟೆ (Mandya APMC)</h3>
+                  <p id="mandiLiveTag">ಇಂದಿನ ನೈಜ ಲೈವ್ ಬೆಲೆಗಳು</p>
+                </div>
+              </div>
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="mandiSearchInput" placeholder="ಬೆಳೆ ಹುಡುಕಿ (Search Crop)...">
+              </div>
+            </div>
+
+            <div class="mandi-list" id="mandiList">
+              <!-- Populated dynamically by app.js -->
+            </div>
+          </section>
+
+          <!-- ── TAB 6: VOICE ASSISTANT ── -->
+          <section class="tab-pane" id="tabVoice">
+            <div class="voice-assistant-card">
+              <div class="voice-header">
+                <div class="voice-ai-avatar">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                  <h3 id="voiceAssistantTitle">ಕೃಷಿ AI ಧ್ವನಿ ಸಹಾಯಕ</h3>
+                  <p id="voiceAssistantSub">ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲೇ ನೇರವಾಗಿ ಮಾತನಾಡಿ</p>
+                </div>
+              </div>
+
+              <!-- Chat History Area -->
+              <div class="chat-history" id="chatHistory">
+                <div class="chat-bubble ai">
+                  <p id="chatGreeting">ನಮಸ್ಕಾರ ಶ್ರೀನಿವಾಸ್ ಅವರೇ! ನಿಮ್ಮ ಹೊಲದ ರೋಗಗಳು, ನೀರಾವರಿ ಅಥವಾ ಮಂಡಿ ಬೆಲೆಗಳ ಬಗ್ಗೆ ಏನಾದರೂ ಕೇಳಿ.</p>
+                </div>
+              </div>
+
+              <!-- Voice Controls -->
+              <div class="voice-controls-bar">
+                <button class="btn-mic-large" id="btnStartVoiceInput">
+                  <i class="fa-solid fa-microphone" id="micIcon"></i>
+                </button>
+                <p class="mic-status-label" id="micStatusLabel">ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ (Tap to Speak)</p>
+              </div>
+
+              <!-- Quick Voice Topic Chips -->
+              <div class="quick-prompts-row" id="voiceQuickChips">
+                <button class="btn-prompt" data-query="ರಾಗಿ ಬೆಳೆಗೆ ಯಾವ ಗೊಬ್ಬರ ಹಾಕಬೇಕು?">🌾 ಗೊಬ್ಬರ ಸಲಹೆ</button>
+                <button class="btn-prompt" data-query="ಬ್ಲಾಸ್ಟ್ ರೋಗಕ್ಕೆ ಏನು ಔಷಧ ಸಿಂಪಡಿಸಬೇಕು?">🐛 ರೋಗ & ಔಷಧ</button>
+                <button class="btn-prompt" data-query="ನನ್ನ ಹೊಲಕ್ಕೆ ನೀರು ಯಾವಾಗ ಹಾಯಿಸಬೇಕು?">💧 ನೀರಾವರಿ</button>
+                <button class="btn-prompt" data-query="ಇಂದಿನ ರಾಗಿ ಮತ್ತು ಭತ್ತದ ಮಂಡಿ ಬೆಲೆ ಎಷ್ಟು?">💰 ಮಂಡಿ ಬೆಲೆ</button>
+                <button class="btn-prompt" data-query="ರೈತರಿಗೆ ಸಿಗುವ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು ಯಾವುವು?">📜 ಸರ್ಕಾರಿ ಯೋಜನೆ</button>
+              </div>
+
+              <!-- Voice & Text Input Controls -->
+              <div class="voice-input-composite">
+                <div class="voice-controls-bar">
+                  <button class="btn-mic-large" id="btnStartVoiceInput" title="ಮಾತನಾಡಲು ಒತ್ತಿ">
+                    <i class="fa-solid fa-microphone" id="micIcon"></i>
+                  </button>
+                  <p class="mic-status-label" id="micStatusLabel">ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ (Tap to Speak)</p>
+                </div>
+
+                <!-- Text Query Fallback / Typing Box -->
+                <div class="voice-text-form" id="voiceTextForm">
+                  <input type="text" id="voiceTextInput" placeholder="ಪ್ರಶ್ನೆ ಕೇಳಿ ಅಥವಾ ಟೈಪ್ ಮಾಡಿ (Ask question)..." autocomplete="off">
+                  <button type="button" id="btnSendVoiceText" class="btn-send-voice">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── TAB 7: SETTINGS ── -->
+          <section class="tab-pane" id="tabSettings">
+            <div class="card settings-profile-card">
+              <div class="profile-row">
+                <div class="profile-avatar"><i class="fa-solid fa-user-check"></i></div>
+                <div>
+                  <h3 id="profileNameDisplay">ಶ್ರೀನಿವಾಸ್ (Srinivas)</h3>
+                  <p id="profilePhoneDisplay">+91 98450 12345 • ಮಂಡ್ಯ, ಕರ್ನಾಟಕ</p>
+                </div>
+              </div>
+              <button class="btn-logout" id="btnLogoutUser">
+                <i class="fa-solid fa-right-from-bracket"></i> <span id="btnLogoutText">ಖಾತೆ ಬದಲಾಯಿಸಿ (Logout)</span>
+              </button>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title" id="setLangGroupTitle">ಭಾಷಾ ಆಯ್ಕೆ (Language)</div>
+              <div class="lang-selector-group">
+                <button class="btn-lang-choice active" data-lang="kn">ಕನ್ನಡ (Kannada)</button>
+                <button class="btn-lang-choice" data-lang="hi">हिन्दी (Hindi)</button>
+                <button class="btn-lang-choice" data-lang="en">English</button>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title" id="setAiGroupTitle">AI ಕಾರ್ಯಾಚರಣೆ ಮೋಡ್ (AI Mode)</div>
+              <div class="ai-mode-selector">
+                <label class="ai-mode-option">
+                  <input type="radio" name="aiMode" value="gemini" checked id="radioAiGemini">
+                  <div>
+                    <strong id="optGeminiTitle">✨ Google Gemini 1.5 Flash AI (Live Cloud)</strong>
+                    <p id="optGeminiSub">ನೈಜ-ಸಮಯದ ಕೃಷಿ AI ಮಾದರಿ (Google GenAI Engine)</p>
+                  </div>
+                </label>
+                <label class="ai-mode-option">
+                  <input type="radio" name="aiMode" value="hybrid" id="radioAiHybrid">
+                  <div>
+                    <strong id="optHybridTitle">ಹೈಬ್ರಿಡ್ ಮೋಡ್ (Hybrid Edge + Cloud)</strong>
+                    <p id="optHybridSub">ಇಂಟರ್ನೆಟ್ ಇದ್ದಾಗ ಆನ್‌ಲೈನ್, ಇಲ್ಲದಿದ್ದಾಗ ಆಫ್‌ಲೈನ್ AI</p>
+                  </div>
+                </label>
+                <label class="ai-mode-option">
+                  <input type="radio" name="aiMode" value="local" id="radioAiLocal">
+                  <div>
+                    <strong id="optLocalTitle">ಆಫ್‌ಲೈನ್ ಮಾತ್ರ (Offline Edge AI Only)</strong>
+                    <p id="optLocalSub">100% ಫೋನ್‌ನಲ್ಲಿಯೇ ಕಾರ್ಯನಿರ್ವಹಣೆ</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+          <button class="nav-item active" data-tab="tabHome">
+            <i class="fa-solid fa-house"></i>
+            <span id="navHome">ಮುಖಪುಟ</span>
+          </button>
+          <button class="nav-item" data-tab="tabScan">
+            <i class="fa-solid fa-camera"></i>
+            <span id="navScan">ಸ್ಕ್ಯಾನ್</span>
+          </button>
+          <button class="nav-item" data-tab="tabIrrigation">
+            <i class="fa-solid fa-faucet-drip"></i>
+            <span id="navIrrigation">ನೀರಾವರಿ</span>
+          </button>
+          <button class="nav-item" data-tab="tabMarket">
+            <i class="fa-solid fa-store"></i>
+            <span id="navMarket">ಮಂಡಿ</span>
+          </button>
+          <button class="nav-item" data-tab="tabVoice">
+            <i class="fa-solid fa-microphone"></i>
+            <span id="navVoice">ಧ್ವನಿ AI</span>
+          </button>
+          <button class="nav-item" data-tab="tabSettings">
+            <i class="fa-solid fa-gear"></i>
+            <span id="navSettings">ಸೆಟ್ಟಿಂಗ್ಸ್</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- ── FARM EDIT MODAL ── -->
+      <div class="modal-overlay" id="farmEditModal" style="display: none;">
+        <div class="modal-card">
+          <button class="btn-close-modal" id="btnCloseFarmEditModal">&times;</button>
+          <h3 id="editFarmModalTitle" style="font-size:16px; font-weight:800; color:#1B4332; margin-bottom:14px;">
+            <i class="fa-solid fa-tractor"></i> ಹೊಲದ ವಿವರ ಬದಲಾಯಿಸಿ (Edit Farm)
+          </h3>
+          <form id="formEditFarm" style="display:flex; flex-direction:column; gap:12px;">
+            <div class="input-field-group">
+              <label><i class="fa-solid fa-signature"></i> ರೈತರ ಹೆಸರು (Farmer Name)</label>
+              <input type="text" id="editFarmerNameInput" required>
+            </div>
+            <div class="input-field-group">
+              <label><i class="fa-solid fa-seedling"></i> ಮುಖ್ಯ ಬೆಳೆ (Crop)</label>
+              <select id="editCropSelect">
+                <option value="ragi">ರಾಗಿ (Finger Millet)</option>
+                <option value="rice">ಭತ್ತ (Paddy / Rice)</option>
+                <option value="sugarcane">ಕಬ್ಬು (Sugarcane)</option>
+                <option value="tomato">ಟೊಮ್ಯಾಟೊ (Tomato)</option>
+                <option value="cotton">ಹತ್ತಿ (Cotton)</option>
+                <option value="groundnut">ಕಡಲೆಕಾಯಿ (Groundnut)</option>
+                <option value="maize">ಮೆಕ್ಕೆಜೋಳ (Maize)</option>
+                <option value="onion">ಈರುಳ್ಳಿ (Onion)</option>
+              </select>
+            </div>
+            <div class="input-field-group">
+              <label><i class="fa-solid fa-vector-square"></i> ವಿಸ್ತೀರ್ಣ (Acres)</label>
+              <input type="number" step="0.5" id="editAreaInput" required>
+            </div>
+            <div class="input-field-group">
+              <label><i class="fa-solid fa-stairs"></i> ಬೆಳೆಯ ಹಂತ (Crop Stage)</label>
+              <select id="editStageSelect">
+                <option value="sowing">ಬಿತ್ತನೆ (Sowing)</option>
+                <option value="vegetative">ಸಸ್ಯ ಬೆಳವಣಿಗೆ (Vegetative)</option>
+                <option value="flowering" selected>ಹೂವಾಡುವ ಹಂತ (Flowering)</option>
+                <option value="grain">ಕಾಳು ತುಂಬುವ ಹಂತ (Grain Filling)</option>
+                <option value="harvest">ಕೊಯ್ಲು (Harvest)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary-auth">
+              <i class="fa-solid fa-check"></i> ಉಳಿಸಿ (Save Farm)
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ── LANGUAGE SELECTOR MODAL ── -->
+      <div class="modal-overlay" id="langModal" style="display: none;">
+        <div class="modal-card lang-modal-card">
+          <button class="btn-close-modal" id="btnCloseLangModal">&times;</button>
+          <h3 id="modalLangTitle" style="font-size:15px; font-weight:800; color:#1B4332; margin-bottom:12px;">ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ (Select Language)</h3>
+          <div class="lang-modal-grid">
+            <button class="lang-option-card" data-lang="kn">
+              <span class="lang-icon-badge">ಕ</span>
+              <strong>ಕನ್ನಡ</strong>
+              <p>Kannada</p>
+            </button>
+            <button class="lang-option-card" data-lang="hi">
+              <span class="lang-icon-badge">हि</span>
+              <strong>हिन्दी</strong>
+              <p>Hindi</p>
+            </button>
+            <button class="lang-option-card" data-lang="en">
+              <span class="lang-icon-badge">EN</span>
+              <strong>English</strong>
+              <p>English</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DIAGNOSIS RESULT DIALOG (REAL ANALYSIS OUTPUT) ── -->
+      <div class="modal-overlay" id="resultModal" style="display: none;">
+        <div class="modal-card result-modal-card">
+          <button class="btn-close-modal" id="btnCloseResultModal">&times;</button>
+          <div class="result-header">
+            <div class="result-icon-badge" id="diagIconBadge">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <div>
+              <h3 id="diagDiseaseName">ರಾಗಿ ಬ್ಲಾಸ್ಟ್ ರೋಗ (Ragi Blast)</h3>
+              <p class="confidence-badge" id="diagConfidence">94% ನಿಖರತೆ (Edge AI)</p>
+            </div>
+          </div>
+
+          <div class="result-tabs-row" id="diagTabsRow">
+            <button class="res-tab-btn active" data-tab="organic" id="tabBtnOrganic">ಸಾವಯವ ಪರಿಹಾರ</button>
+            <button class="res-tab-btn" data-tab="chemical" id="tabBtnChemical">ರಾಸಾಯನಿಕ ಪರಿಹಾರ</button>
+          </div>
+
+          <div class="result-tab-content active" id="tabContentOrganic">
+            <p id="organicTreatmentText">ಪ್ರತಿ ಲೀಟರ್ ನೀರಿಗೆ 2ml ಸೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೆಸೆನ್ಸ್ (Pseudomonas fluorescens) ಮಿಶ್ರಣ ಮಾಡಿ ಸಂಜೆ ವೇಳೆಯಲ್ಲಿ ಸಿಂಪಡಿಸಿ.</p>
+          </div>
+          <div class="result-tab-content" id="tabContentChemical">
+            <p id="chemicalTreatmentText">ಟ್ರೈಸೈಕ್ಲಾಜೋಲ್ 75% WP (Tricyclazole) - 0.6 ಗ್ರಾಂ ಪ್ರತಿ ಲೀಟರ್ ನೀರಿಗೆ ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.</p>
+          </div>
+
+          <div class="result-actions">
+            <button class="btn-speak-result" id="btnSpeakResult">
+              <i class="fa-solid fa-volume-high"></i> <span id="btnSpeakResultText">ಪರಿಹಾರವನ್ನು ಆಲಿಸಿ (ಕನ್ನಡ)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js?v=10.0"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Identity -->
+    <string name="app_name">ಕ್ರುಶಿಎಡ್ಜ್ AI</string>
+    <string name="app_tagline">ನಿಮ್ಮ ಹೊಲದ AI ಸಹಾಯಕ — ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದಿದ್ದರೂ.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ಮುಖಪುಟ</string>
+    <string name="nav_farm">ನನ್ನ ಹೊಲ</string>
+    <string name="nav_insights">ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="nav_camera">ಬೆಳೆ ಪರಿಶೀಲನೆ</string>
+    <string name="nav_more">ಇನ್ನಷ್ಟು</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">ಕ್ರುಶಿಎಡ್ಜ್ AI</string>
+    <string name="onboarding_welcome_subtitle">ನಿಮ್ಮ ಹೊಲವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು AI ಸಹಾಯ.</string>
+    <string name="onboarding_continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="onboarding_skip">ಬಿಟ್ಟುಬಿಡಿ</string>
+    <string name="onboarding_done">ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="onboarding_language_title">ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="onboarding_language_subtitle">ನಿಮಗೆ ಅನುಕೂಲವಾದ ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ.</string>
+    <string name="onboarding_farm_title">ಹೊಲದ ಮಾಹಿತಿ</string>
+    <string name="onboarding_farm_subtitle">ನಿಮ್ಮ ಹೊಲದ ಬಗ್ಗೆ ಹೇಳಿ.</string>
+    <string name="onboarding_offline_title">ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದೆಯೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ</string>
+    <string name="onboarding_offline_subtitle">ಕ್ರುಶಿಎಡ್ಜ್ AI ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದಿದ್ದರೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ. AI ವಿಶ್ಲೇಷಣೆ ನೇರವಾಗಿ ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ನಡೆಯುತ್ತದೆ.</string>
+    <string name="onboarding_permissions_title">ಅನುಮತಿಗಳು</string>
+    <string name="onboarding_permissions_subtitle">ಕ್ರುಶಿಎಡ್ಜ್ AI ಕೆಲವು ಅನುಮತಿಗಳ ಅಗತ್ಯವಿದೆ.</string>
+
+    <!-- Farm Setup -->
+    <string name="farm_name_label">ಹೊಲದ ಹೆಸರು</string>
+    <string name="farm_name_hint">ಉದಾ. ಶ್ರೀನಿವಾಸ್ ಹೊಲ</string>
+    <string name="village_label">ಹಳ್ಳಿ</string>
+    <string name="village_hint">ನಿಮ್ಮ ಹಳ್ಳಿಯ ಹೆಸರು</string>
+    <string name="crop_label">ಬೆಳೆ</string>
+    <string name="crop_hint">ನಿಮ್ಮ ಬೆಳೆ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="area_label">ವಿಸ್ತೀರ್ಣ (ಎಕರೆ)</string>
+    <string name="area_hint">ಉದಾ. 1.8</string>
+    <string name="crop_stage_label">ಬೆಳೆಯ ಹಂತ</string>
+    <string name="soil_type_label">ಮಣ್ಣಿನ ವಿಧ (ಐಚ್ಛಿಕ)</string>
+    <string name="save_farm">ಹೊಲ ಉಳಿಸಿ</string>
+
+    <!-- Crop Stages -->
+    <string name="stage_sowing">ಬಿತ್ತನೆ</string>
+    <string name="stage_germination">ಮೊಳಕೆ</string>
+    <string name="stage_vegetative">ಸಸ್ಯ ಬೆಳವಣಿಗೆ</string>
+    <string name="stage_flowering">ಹೂ ಬಿಡುವ ಹಂತ</string>
+    <string name="stage_grain_filling">ಕಾಳು ತುಂಬುವ ಹಂತ</string>
+    <string name="stage_maturity">ಪಕ್ವತೆ</string>
+    <string name="stage_harvest">ಕೊಯ್ಲು</string>
+
+    <!-- Crops -->
+    <string name="crop_ragi">ರಾಗಿ</string>
+    <string name="crop_rice">ಭತ್ತ</string>
+    <string name="crop_jowar">ಜೋಳ</string>
+    <string name="crop_maize">ಮೆಕ್ಕೆಜೋಳ</string>
+    <string name="crop_groundnut">ಕಡಲೆಕಾಯಿ</string>
+    <string name="crop_cotton">ಹತ್ತಿ</string>
+    <string name="crop_sugarcane">ಕಬ್ಬು</string>
+    <string name="crop_tomato">ಟೊಮೆಟೊ</string>
+    <string name="crop_onion">ಈರುಳ್ಳಿ</string>
+    <string name="crop_sunflower">ಸೂರ್ಯಕಾಂತಿ</string>
+
+    <!-- Home Screen -->
+    <string name="greeting_morning">ಶುಭೋದಯ</string>
+    <string name="greeting_afternoon">ಶುಭ ಮಧ್ಯಾಹ್ನ</string>
+    <string name="greeting_evening">ಶುಭ ಸಂಜೆ</string>
+    <string name="field_status">ಹೊಲದ ಸ್ಥಿತಿ</string>
+    <string name="today_advice">ಇಂದಿನ ಸಲಹೆ</string>
+    <string name="take_crop_photo">ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ</string>
+    <string name="today_crop_photo">ಇಂದಿನ ಬೆಳೆ ಫೋಟೋ</string>
+    <string name="check_field">ಹೊಲ ಪರಿಶೀಲಿಸಿ</string>
+    <string name="listen">ಕೇಳಿ</string>
+
+    <!-- Risk Levels -->
+    <string name="risk_normal">ಸಾಮಾನ್ಯ</string>
+    <string name="risk_monitor">ಗಮನಿಸಿ</string>
+    <string name="risk_inspect">ಪರಿಶೀಲಿಸಿ</string>
+    <string name="risk_urgent">ತುರ್ತು</string>
+    <string name="risk_insufficient">ಸಾಕಷ್ಟು ಮಾಹಿತಿ ಇಲ್ಲ</string>
+
+    <!-- Camera -->
+    <string name="camera_title">ಬೆಳೆಯನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="camera_instruction">ಎಲೆಯು ಸ್ಪಷ್ಟವಾಗಿ ಕಾಣುವಂತೆ ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ.</string>
+    <string name="camera_capture">ಫೋಟೋ</string>
+    <string name="camera_retake">ಮತ್ತೊಮ್ಮೆ</string>
+    <string name="camera_analyze">ವಿಶ್ಲೇಷಿಸಿ</string>
+    <string name="camera_flash_on">ಫ್ಲ್ಯಾಶ್ ಆನ್</string>
+    <string name="camera_flash_off">ಫ್ಲ್ಯಾಶ್ ಆಫ್</string>
+
+    <!-- AI Analysis -->
+    <string name="analyzing">ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="analysis_complete">ವಿಶ್ಲೇಷಣೆ ಪೂರ್ಣವಾಗಿದೆ</string>
+    <string name="ai_local_mode">ಸ್ಥಳೀಯ AI</string>
+    <string name="ai_remote_mode">ಆನ್ಲೈನ್ AI</string>
+    <string name="ai_hybrid_mode">ಸಂಯುಕ್ತ AI</string>
+    <string name="ai_offline_mode">ಆಫ್ಲೈನ್ AI</string>
+    <string name="confidence_label">ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
+
+    <!-- Recommendations -->
+    <string name="recommendation_title">ಸಲಹೆ</string>
+    <string name="why_recommendation">ಈ ಸಲಹೆ ಏಕೆ ಬಂದಿದೆ?</string>
+    <string name="action_label">ಕ್ರಮ</string>
+    <string name="reason_label">ಕಾರಣ</string>
+    <string name="urgency_label">ತುರ್ತು</string>
+    <string name="evidence_label">ಸಾಕ್ಷ್ಯ</string>
+
+    <!-- Weather -->
+    <string name="weather_title">ಹವಾಮಾನ</string>
+    <string name="weather_updated">%1$s ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="weather_stale">ಹವಾಮಾನ ಮಾಹಿತಿ ಹಳೆಯದಾಗಿದೆ.</string>
+    <string name="temperature_label">ಉಷ್ಣಾಂಶ</string>
+    <string name="humidity_label">ತೇವಾಂಶ</string>
+    <string name="rain_probability_label">ಮಳೆಯ ಸಾಧ್ಯತೆ</string>
+    <string name="wind_label">ಗಾಳಿ</string>
+
+    <!-- Satellite -->
+    <string name="satellite_title">ಉಪಗ್ರಹ ಮಾಹಿತಿ</string>
+    <string name="ndvi_label">ಸಸ್ಯ ಆರೋಗ್ಯ ಸೂಚ್ಯಂಕ</string>
+    <string name="ndvi_trend_label">ಸಸ್ಯ ಆರೋಗ್ಯ ಪ್ರವೃತ್ತಿ</string>
+    <string name="moisture_label">ಮಣ್ಣಿನ ತೇವಾಂಶ</string>
+    <string name="satellite_source">ಮೂಲ: %1$s</string>
+    <string name="satellite_date">ಸಂಗ್ರಹಿಸಿದ ದಿನಾಂಕ: %1$s</string>
+
+    <!-- Insights -->
+    <string name="insights_title">ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="period_7days">7 ದಿನ</string>
+    <string name="period_30days">30 ದಿನ</string>
+    <string name="period_season">ಋತು</string>
+    <string name="ndvi_trend_chart">ಸಸ್ಯ ಆರೋಗ್ಯ ಪ್ರವೃತ್ತಿ</string>
+    <string name="moisture_trend_chart">ತೇವಾಂಶ ಪ್ರವೃತ್ತಿ</string>
+    <string name="rainfall_chart">ಮಳೆ</string>
+    <string name="temperature_chart">ಉಷ್ಣಾಂಶ</string>
+    <string name="stress_chart">ಬೆಳೆ ಒತ್ತಡ</string>
+
+    <!-- Farm Map -->
+    <string name="farm_map_title">ಹೊಲದ ನಕ್ಷೆ</string>
+    <string name="zone_label">ವಲಯ %1$d</string>
+    <string name="data_observed">ಗಮನಿಸಲಾಗಿದೆ</string>
+    <string name="data_estimated">ಅಂದಾಜು</string>
+    <string name="data_farmer_evidence">ರೈತನ ಸಾಕ್ಷ್ಯ</string>
+
+    <!-- Offline / Sync -->
+    <string name="status_online">ಆನ್ಲೈನ್</string>
+    <string name="status_syncing">ಸಿಂಕ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="status_offline">ಆಫ್ಲೈನ್ — ಸ್ಥಳೀಯ AI ಲಭ್ಯವಿದೆ</string>
+    <string name="status_sync_pending">ಸಿಂಕ್ ಬಾಕಿಯಿದೆ</string>
+    <string name="status_data_stale">ಮಾಹಿತಿ ಹಳೆಯದಾಗಿರಬಹುದು</string>
+    <string name="status_ai_local">AI ಸ್ಥಳೀಯ ಮೋಡ್</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಇಲ್ಲ. ಸ್ಥಳೀಯ AI ಲಭ್ಯವಿದೆ.</string>
+    <string name="error_photo_unclear">ಫೋಟೋ ಸ್ಪಷ್ಟವಾಗಿಲ್ಲ. ಬೆಳಕು ಹೆಚ್ಚಿಸಿ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_gps_unavailable">ಸ್ಥಳ ಪತ್ತೆಯಾಗಲಿಲ್ಲ. ಉಳಿಸಿದ ಹೊಲದ ಸ್ಥಳವನ್ನು ಬಳಸಲಾಗುತ್ತಿದೆ.</string>
+    <string name="error_low_confidence">ಈಗ ಖಚಿತ ಸಲಹೆ ನೀಡಲು ಸಾಕಷ್ಟು ಮಾಹಿತಿ ಇಲ್ಲ.</string>
+    <string name="error_weather_stale">ಹವಾಮಾನ ಮಾಹಿತಿ ಹಳೆಯದಾಗಿದೆ.</string>
+    <string name="error_api_unavailable">ಆನ್ಲೈನ್ AI ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯ AI ಮೂಲಕ ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ.</string>
+    <string name="error_generic">ಏನೋ ತಪ್ಪಾಗಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+
+    <!-- XAI -->
+    <string name="xai_title">ಈ ಸಲಹೆ ಏಕೆ ಬಂದಿದೆ?</string>
+    <string name="xai_vegetation_trend">ಸಸ್ಯ ಆರೋಗ್ಯ ಪ್ರವೃತ್ತಿ</string>
+    <string name="xai_soil_moisture">ಮಣ್ಣಿನ ತೇವಾಂಶ</string>
+    <string name="xai_crop_photo">ಬೆಳೆ ಫೋಟೋ</string>
+    <string name="xai_weather">ಹವಾಮಾನ</string>
+    <string name="xai_recommendation">ಸಲಹೆ</string>
+
+    <!-- Technical / Judge Mode -->
+    <string name="technical_title">ತಾಂತ್ರಿಕ ವಿವರಗಳು</string>
+    <string name="tech_edge_ai_status">ಎಡ್ಜ್ AI ಸ್ಥಿತಿ</string>
+    <string name="tech_inference">ಇನ್ಫರೆನ್ಸ್</string>
+    <string name="tech_network">ನೆಟ್‌ವರ್ಕ್</string>
+    <string name="tech_remote_calls">ರಿಮೋಟ್ ಕಾಲ್‌ಗಳು</string>
+    <string name="tech_model">ಮಾಡೆಲ್</string>
+    <string name="tech_model_size">ಮಾಡೆಲ್ ಗಾತ್ರ</string>
+    <string name="tech_quantization">ಕ್ವಾಂಟೈಸೇಶನ್</string>
+    <string name="tech_inference_time">ಇನ್ಫರೆನ್ಸ್ ಸಮಯ</string>
+    <string name="tech_ram">RAM ಬಳಕೆ</string>
+    <string name="tech_confidence">ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
+    <string name="tech_satellite_source">ಉಪಗ್ರಹ ಮೂಲ</string>
+    <string name="tech_weather_source">ಹವಾಮಾನ ಮೂಲ</string>
+    <string name="tech_data_age">ಮಾಹಿತಿಯ ವಯಸ್ಸು</string>
+    <string name="tech_model_version">ಮಾಡೆಲ್ ಆವೃತ್ತಿ</string>
+    <string name="tech_sync_status">ಸಿಂಕ್ ಸ್ಥಿತಿ</string>
+
+    <!-- Settings / More -->
+    <string name="settings_title">ಸೆಟ್ಟಿಂಗ್ಸ್</string>
+    <string name="language_setting">ಭಾಷೆ</string>
+    <string name="privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
+    <string name="data_controls">ಡೇಟಾ ನಿಯಂತ್ರಣ</string>
+    <string name="delete_farm_data">ಹೊಲದ ಡೇಟಾ ಅಳಿಸಿ</string>
+    <string name="export_data">ಡೇಟಾ ರಫ್ತು ಮಾಡಿ</string>
+    <string name="about">ಬಗ್ಗೆ</string>
+    <string name="version">ಆವೃತ್ತಿ %1$s</string>
+    <string name="demo_mode">ಡೆಮೋ ಮೋಡ್</string>
+    <string name="technical_mode">ತಾಂತ್ರಿಕ ಮೋಡ್</string>
+
+    <!-- SMS Fallback -->
+    <string name="sms_fallback_title">SMS ಫಾಲ್‌ಬ್ಯಾಕ್</string>
+    <string name="sms_fallback_description">7+ ದಿನಗಳು ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದಿದ್ದಾಗ, SMS ಮೂಲಕ ಹೊಲದ ನವೀಕರಣ ಕೋರಬಹುದು.</string>
+    <string name="sms_send_request">SMS ಕೋರಿಕೆ ಕಳುಹಿಸಿ</string>
+    <string name="sms_last_request">ಕೊನೆಯ SMS ಕೋರಿಕೆ: %1$s</string>
+
+    <!-- Permissions -->
+    <string name="permission_camera_title">ಕ್ಯಾಮೆರಾ</string>
+    <string name="permission_camera_description">ನಿಮ್ಮ ಬೆಳೆಯನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಮತ್ತು ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳನ್ನು ಕಂಡುಹಿಡಿಯಲು.</string>
+    <string name="permission_location_title">ಸ್ಥಳ</string>
+    <string name="permission_location_description">ನಿಮ್ಮ ಹೊಲವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಮತ್ತು ವಲಯ-ನಿರ್ದಿಷ್ಟ ಮಾಹಿತಿ ನೀಡಲು.</string>
+    <string name="permission_notification_title">ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="permission_notification_description">ಮುಖ್ಯವಾದ ಹೊಲದ ಸ್ಥಿತಿಗಳ ಬಗ್ಗೆ ಎಚ್ಚರಿಸಲು.</string>
+    <string name="permission_grant">ಅನುಮತಿಸಿ</string>
+    <string name="permission_granted">ಅನುಮತಿಸಲಾಗಿದೆ</string>
+
+    <!-- Abstention -->
+    <string name="abstention_title">ಸಾಕಷ್ಟು ಮಾಹಿತಿ ಇಲ್ಲ</string>
+    <string name="abstention_message">ವಿಶ್ವಾಸಾರ್ಹ ಸಲಹೆ ನೀಡಲು ಸಾಕಷ್ಟು ಮಾಹಿತಿ ಇಲ್ಲ. ಮತ್ತೊಂದು ಫೋಟೋ ತೆಗೆಯಿರಿ ಅಥವಾ ಮುಂದಿನ ಅವಲೋಕನಕ್ಕೆ ಕಾಯಿರಿ.</string>
+
+    <!-- Safety -->
+    <string name="safety_disclaimer">ಮಣ್ಣಿನ ಪರೀಕ್ಷೆ / ಸ್ಥಳೀಯ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನದ ಆಧಾರದ ಮೇಲೆ ಪೋಷಕಾಂಶ ನಿರ್ವಹಣೆ ಪರಿಶೀಲಿಸಿ.</string>
+
+    <!-- Data Freshness -->
+    <string name="updated_just_now">ಈಗಷ್ಟೇ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="updated_minutes_ago">%1$d ನಿಮಿಷಗಳ ಹಿಂದೆ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="updated_hours_ago">%1$d ಗಂಟೆಗಳ ಹಿಂದೆ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="updated_days_ago">%1$d ದಿನಗಳ ಹಿಂದೆ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+
+    <!-- Units -->
+    <string name="unit_acres">ಎಕರೆ</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_percent">%</string>
+    <string name="unit_kmh">ಕಿಮೀ/ಗಂ</string>
+    <string name="unit_mm">ಮಿಮೀ</string>
+    <string name="unit_mb">MB</string>
+    <string name="unit_ms">ms</string>
+
+    <!-- Demo -->
+    <string name="demo_farm_name">ಶ್ರೀನಿವಾಸ್ ಹೊಲ</string>
+    <string name="demo_village">ಹೊಸಹಳ್ಳಿ</string>
+    <string name="demo_crop">ರಾಗಿ</string>
+    <string name="demo_area">1.8</string>
+</resources>

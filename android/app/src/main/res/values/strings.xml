@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Identity -->
+    <string name="app_name">KrushiEdge AI</string>
+    <string name="app_tagline">Your field\'s AI assistant — even without internet.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_farm">My Farm</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_camera">Check Crop</string>
+    <string name="nav_more">More</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">KrushiEdge AI</string>
+    <string name="onboarding_welcome_subtitle">AI assistance to understand your field.</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_done">Get Started</string>
+    <string name="onboarding_language_title">Choose Language</string>
+    <string name="onboarding_language_subtitle">Select your preferred language.</string>
+    <string name="onboarding_farm_title">Set Up Your Farm</string>
+    <string name="onboarding_farm_subtitle">Tell us about your farm.</string>
+    <string name="onboarding_offline_title">Works Without Internet</string>
+    <string name="onboarding_offline_subtitle">KrushiEdge AI works even when you have no internet. AI analysis runs directly on your phone.</string>
+    <string name="onboarding_permissions_title">Permissions</string>
+    <string name="onboarding_permissions_subtitle">KrushiEdge AI needs a few permissions to help you best.</string>
+
+    <!-- Farm Setup -->
+    <string name="farm_name_label">Farm Name</string>
+    <string name="farm_name_hint">e.g. Srinivas Farm</string>
+    <string name="village_label">Village</string>
+    <string name="village_hint">Your village name</string>
+    <string name="crop_label">Crop</string>
+    <string name="crop_hint">Select your crop</string>
+    <string name="area_label">Area (acres)</string>
+    <string name="area_hint">e.g. 1.8</string>
+    <string name="crop_stage_label">Crop Stage</string>
+    <string name="soil_type_label">Soil Type (Optional)</string>
+    <string name="save_farm">Save Farm</string>
+
+    <!-- Crop Stages -->
+    <string name="stage_sowing">Sowing</string>
+    <string name="stage_germination">Germination</string>
+    <string name="stage_vegetative">Vegetative</string>
+    <string name="stage_flowering">Flowering</string>
+    <string name="stage_grain_filling">Grain Filling</string>
+    <string name="stage_maturity">Maturity</string>
+    <string name="stage_harvest">Harvest</string>
+
+    <!-- Crops -->
+    <string name="crop_ragi">Ragi (Finger Millet)</string>
+    <string name="crop_rice">Rice (Paddy)</string>
+    <string name="crop_jowar">Jowar (Sorghum)</string>
+    <string name="crop_maize">Maize (Corn)</string>
+    <string name="crop_groundnut">Groundnut</string>
+    <string name="crop_cotton">Cotton</string>
+    <string name="crop_sugarcane">Sugarcane</string>
+    <string name="crop_tomato">Tomato</string>
+    <string name="crop_onion">Onion</string>
+    <string name="crop_sunflower">Sunflower</string>
+
+    <!-- Home Screen -->
+    <string name="greeting_morning">Good Morning</string>
+    <string name="greeting_afternoon">Good Afternoon</string>
+    <string name="greeting_evening">Good Evening</string>
+    <string name="field_status">Field Status</string>
+    <string name="today_advice">Today\'s Advice</string>
+    <string name="take_crop_photo">Take Crop Photo</string>
+    <string name="today_crop_photo">Today\'s Crop Photo</string>
+    <string name="check_field">Check Field</string>
+    <string name="listen">Listen</string>
+
+    <!-- Risk Levels -->
+    <string name="risk_normal">Normal</string>
+    <string name="risk_monitor">Monitor</string>
+    <string name="risk_inspect">Inspect</string>
+    <string name="risk_urgent">Urgent</string>
+    <string name="risk_insufficient">Insufficient Data</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Check Crop</string>
+    <string name="camera_instruction">Take a photo with the leaf clearly visible.</string>
+    <string name="camera_capture">Capture</string>
+    <string name="camera_retake">Retake</string>
+    <string name="camera_analyze">Analyze</string>
+    <string name="camera_flash_on">Flash On</string>
+    <string name="camera_flash_off">Flash Off</string>
+
+    <!-- AI Analysis -->
+    <string name="analyzing">Analyzing…</string>
+    <string name="analysis_complete">Analysis Complete</string>
+    <string name="ai_local_mode">Local AI</string>
+    <string name="ai_remote_mode">Online AI</string>
+    <string name="ai_hybrid_mode">Hybrid AI</string>
+    <string name="ai_offline_mode">Offline AI</string>
+    <string name="confidence_label">Confidence</string>
+
+    <!-- Recommendations -->
+    <string name="recommendation_title">Recommendation</string>
+    <string name="why_recommendation">Why this recommendation?</string>
+    <string name="action_label">Action</string>
+    <string name="reason_label">Reason</string>
+    <string name="urgency_label">Urgency</string>
+    <string name="evidence_label">Evidence</string>
+
+    <!-- Weather -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_updated">Updated %1$s</string>
+    <string name="weather_stale">Weather data is outdated.</string>
+    <string name="temperature_label">Temperature</string>
+    <string name="humidity_label">Humidity</string>
+    <string name="rain_probability_label">Rain Probability</string>
+    <string name="wind_label">Wind</string>
+
+    <!-- Satellite -->
+    <string name="satellite_title">Satellite Data</string>
+    <string name="ndvi_label">Vegetation Index</string>
+    <string name="ndvi_trend_label">Vegetation Trend</string>
+    <string name="moisture_label">Soil Moisture</string>
+    <string name="satellite_source">Source: %1$s</string>
+    <string name="satellite_date">Acquired: %1$s</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Insights</string>
+    <string name="period_7days">7 Days</string>
+    <string name="period_30days">30 Days</string>
+    <string name="period_season">Season</string>
+    <string name="ndvi_trend_chart">Vegetation Trend</string>
+    <string name="moisture_trend_chart">Moisture Trend</string>
+    <string name="rainfall_chart">Rainfall</string>
+    <string name="temperature_chart">Temperature</string>
+    <string name="stress_chart">Crop Stress</string>
+
+    <!-- Farm Map -->
+    <string name="farm_map_title">Field Map</string>
+    <string name="zone_label">Zone %1$d</string>
+    <string name="data_observed">Observed</string>
+    <string name="data_estimated">Estimated</string>
+    <string name="data_farmer_evidence">Farmer Evidence</string>
+
+    <!-- Offline / Sync -->
+    <string name="status_online">Online</string>
+    <string name="status_syncing">Syncing…</string>
+    <string name="status_offline">Offline — Local AI Available</string>
+    <string name="status_sync_pending">Sync Pending</string>
+    <string name="status_data_stale">Data May Be Outdated</string>
+    <string name="status_ai_local">AI Local Mode</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">No internet connection. Local AI is available.</string>
+    <string name="error_photo_unclear">Photo is not clear. Increase light and try again.</string>
+    <string name="error_gps_unavailable">Location not detected. Using saved field location.</string>
+    <string name="error_low_confidence">Not enough information to give a definite recommendation right now.</string>
+    <string name="error_weather_stale">Weather information is outdated.</string>
+    <string name="error_api_unavailable">Online AI not available. Checking via local AI.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- XAI -->
+    <string name="xai_title">Why this recommendation?</string>
+    <string name="xai_vegetation_trend">Vegetation trend</string>
+    <string name="xai_soil_moisture">Soil moisture</string>
+    <string name="xai_crop_photo">Crop photo</string>
+    <string name="xai_weather">Weather</string>
+    <string name="xai_recommendation">Recommendation</string>
+
+    <!-- Technical / Judge Mode -->
+    <string name="technical_title">Technical Details</string>
+    <string name="tech_edge_ai_status">Edge AI Status</string>
+    <string name="tech_inference">Inference</string>
+    <string name="tech_network">Network</string>
+    <string name="tech_remote_calls">Remote Calls</string>
+    <string name="tech_model">Model</string>
+    <string name="tech_model_size">Model Size</string>
+    <string name="tech_quantization">Quantization</string>
+    <string name="tech_inference_time">Inference Time</string>
+    <string name="tech_ram">RAM Usage</string>
+    <string name="tech_confidence">Confidence</string>
+    <string name="tech_satellite_source">Satellite Source</string>
+    <string name="tech_weather_source">Weather Source</string>
+    <string name="tech_data_age">Data Age</string>
+    <string name="tech_model_version">Model Version</string>
+    <string name="tech_sync_status">Sync Status</string>
+
+    <!-- Settings / More -->
+    <string name="settings_title">Settings</string>
+    <string name="language_setting">Language</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="data_controls">Data Controls</string>
+    <string name="delete_farm_data">Delete Farm Data</string>
+    <string name="export_data">Export Data</string>
+    <string name="about">About</string>
+    <string name="version">Version %1$s</string>
+    <string name="demo_mode">Demo Mode</string>
+    <string name="technical_mode">Technical Mode</string>
+
+    <!-- SMS Fallback -->
+    <string name="sms_fallback_title">SMS Fallback</string>
+    <string name="sms_fallback_description">When there is no internet for 7+ days, field updates can be requested via SMS.</string>
+    <string name="sms_send_request">Send SMS Request</string>
+    <string name="sms_last_request">Last SMS Request: %1$s</string>
+
+    <!-- Permissions -->
+    <string name="permission_camera_title">Camera</string>
+    <string name="permission_camera_description">To scan your crop and detect health issues.</string>
+    <string name="permission_location_title">Location</string>
+    <string name="permission_location_description">To locate your field and provide zone-specific insights.</string>
+    <string name="permission_notification_title">Notifications</string>
+    <string name="permission_notification_description">To alert you about important field conditions.</string>
+    <string name="permission_grant">Grant</string>
+    <string name="permission_granted">Granted</string>
+
+    <!-- Abstention -->
+    <string name="abstention_title">Insufficient information</string>
+    <string name="abstention_message">Not enough data to provide a reliable recommendation. Try taking another photo or wait for the next observation.</string>
+
+    <!-- Safety -->
+    <string name="safety_disclaimer">Verify nutrient management based on soil test / local agricultural guidance.</string>
+
+    <!-- Data Freshness -->
+    <string name="updated_just_now">Updated just now</string>
+    <string name="updated_minutes_ago">Updated %1$d minutes ago</string>
+    <string name="updated_hours_ago">Updated %1$d hours ago</string>
+    <string name="updated_days_ago">Updated %1$d days ago</string>
+
+    <!-- Units -->
+    <string name="unit_acres">acres</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_percent">%</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="unit_mm">mm</string>
+    <string name="unit_mb">MB</string>
+    <string name="unit_ms">ms</string>
+
+    <!-- Demo -->
+    <string name="demo_farm_name">Srinivas Farm</string>
+    <string name="demo_village">Hosahalli</string>
+    <string name="demo_crop">Ragi</string>
+    <string name="demo_area">1.8</string>
+</resources>
